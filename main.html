@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- this is the navbar -->
+    <nav class="navbar">
+        <ul class="left_nav">
+            <li>LOGO</li>
+        </ul>
+        <ul class="center_nav">
+            <li> <a href="#main_box">HOME</a></li>
+            <li><a href="#about_me">ABOUT</a></li>
+            <li> <a href="#project">PROJECT</a></li>
+            <li> <a href="#content">CONTACT</a></li>
+        </ul>
+        <ul id="theme" class="right_nav">
+            <li>
+                <i id="moon" class="fa fa-moon"></i>
+                <i id="sun" class="fa fa-sun"></i>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        var theme = document.getElementById('theme');
+        var moon = document.getElementById('moon');
+        var sun = document.getElementById('sun');
+        theme.addEventListener('click', () => {
+            var backgroundColor = document.body.style.backgroundColor;
+            if (backgroundColor === 'rgb(170, 170, 170)' || backgroundColor === '#aaa') {
+                document.body.style.backgroundColor = '#f0f0f0';
+                document.querySelector('.navbar').style.background = 'linear-gradient(145deg, #d4d4d4, #ffffff)';
+                moon.style.display = 'none';
+                sun.style.display = 'block';
+            } else {
+                document.body.style.backgroundColor = '#aaa';
+                document.querySelector('.navbar').style.background = 'linear-gradient(145deg, #ffffff, #d4d4d4)';
+                moon.style.display = 'block';
+                sun.style.display = 'none';
+
+            }
+        });
+    </script>
+    <!-- ----------main-------- -->
+    <div id="main_box" class="main_box">
+        <section class="text_box">
+            <div class="hello">
+                <p>HELLO I,m</p>
+            </div>
+            <div class="type_text">
+                <span class="typed_texted"> </span>
+            </div>
+
+
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+            <!-- Setup and start animation! -->
+            <script>
+                var typed = new Typed('.typed_texted', {
+                    strings: ['Piyush jain', 'Programmer', 'WebDeveloper'],
+                    typeSpeed: 150,
+                    backSpeed: 150,
+                    loop: true
+                });
+            </script>
+
+            <div class="my_info">
+                <p>"I'm <span class="text_filed"> Piyush Jain</span> , a web developer and CS student. Passionate about
+                    creating dynamic websites and staying updated with tech trends."</p>
+            </div>
+            <div class="buttons">
+                <button class=" btn hire_me">HIRE ME</button>
+                <a href="Sample Resume 2024 (1).pdf" download="">
+                    <button class="btn resume"> Download Resume <i class="fa-solid fa-download"></i></button>
+                </a>
+            </div>
+            <div class="social_media">
+                <div class="icon_circle"></div>
+                <div class="icon"><a href="https://www.instagram.com/p4p.iyush?igsh=NTdqZ2gzaTdxdDhy"><i
+                            class="fa-brands fa-square-instagram"></i></a> </div>
+                <div class="icon"><a
+                        href="https://www.linkedin.com/in/piyush-jain-02b222297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        <i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="icon"><a href="https://github.com/p4p-iyush"> <i class="fa-brands fa-github"></i></a></div>
+                <div class="icon"><i class="fa-brands fa-discord"></i></div>
+            </div>
+        </section>
+        <section class="big_image">
+            <div class="image">
+                <img src="photo.png" alt="">
+            </div>
+        </section>
+    </div>
+    <!-- --- main box about box 2 -- -->
+    <div id="about_me" class="about_me">
+        <div class="top-header">
+            <h1>About me</h1>
+        </div>
+        <div class="about_section">
+            <section class="personal">
+                <div class="personal_photo">
+                    <img src="photo.png" alt="">
+
+                </div>
+
+                <div class="persoanl_details">
+                    <div class="my_info">
+                        <p> "My name is <span class="text_filed"> Piyush Jain</span>. I'm a web developer and a CS
+                            student."</p>
+                    </div>
+                    <div class="button">
+                        <button class="btn hire_me">HIRE ME</button>
+
+                    </div>
+                </div>
+            </section>
+            <section class="skills">
+                <div class="skill-bar">
+                    <h3>HTML</h3>
+                    <div class="progress_bar">
+                        <span data-width="90%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <h3>CSS</h3>
+                    <div class="progress_bar">
+                        <span data-width="90%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <h3>C</h3>
+                    <div class="progress_bar">
+                        <span data-width="70%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <h3>C++</h3>
+                    <div class="progress_bar">
+                        <span data-width="90%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <h3>JAVA</h3>
+                    <div class="progress_bar">
+                        <span data-width="30%"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <h3>JAVASCRIPT</h3>
+                    <div class="progress_bar">
+                        <span data-width="70% "></span>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <script>
+            const span = document.querySelectorAll('.skills .progress_bar span');
+
+            span.forEach((span) => {
+                span.style.width = span.dataset.width;
+                span.innerHTML = span.dataset.width;
+            })
+        </script>
+    </div>
+    <!-- project box  is here box 3 -->
+    <div id="project" class="project_section">
+        <div class="heading hello">Project Details</div>
+        <div class="section_complete">
+            <section class="completed">
+                <i class="fa fa-suitcase"></i>
+                <h2>COMPLETE</h2>
+                <label>5 Project Of HTML,CSS And JS</label>
+            </section>
+            <section class="completed">
+                <i class="fa fa-graduation-cap"></i>
+                <h2>EXPERINCE</h2>
+                <label>1 YEAR In Webdevelopment</label>
+            </section>
+        </div>
+    </div>
+    <!-- contact me box 4 -->
+    <div id="content" class="contact">
+        <header class="contact_header">
+            <h1>Let's Work Together</h1>
+            <p>Do you have an project in your mind , contact me!</p>
+        </header>
+        <div class="secton_part">
+
+            <section class="find_me">
+                <h1>Find Me <i class="fa fa-location-dot"></i></h1>
+                <p class="email"><i class="fa-solid fa-envelope"> <a
+                            href="mailto:jainpiyush@gmail.com">jainpiyush@gmail.com</a></i>
+                </p>
+                <p class="telephone"><i class="fa-solid fa-phone"> <a href="tel:+987654321">987654321</a></i>
+                </p>
+            </section>
+            <section class="user_details">
+                <div class="input_user">
+                    <input class="user1" type="text" placeholder="Your Name">
+                    <input class="user2" type="email" placeholder="Your Email">
+                </div>
+                <div class="text_user">
+                    <input class="user3" type="text" placeholder="Subject">
+                    <textarea class="user4" cols="50" rows="20" placeholder="Message"></textarea>
+                </div>
+                <div class=" user_btn button">
+                    <button class="btn">Send <i class="fa fa-paper-plane"></i></button>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <!-- this is footer box no 5 -->
+    <footer>
+        <ul class="footer_nav">
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li> PROJECT</li>
+            <li>CONTACT</li>
+        </ul>
+        <div class=" footer_media social_media">
+            <div class="icon"><i class="fa-brands fa-square-instagram"></i></div>
+            <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="icon"><i class="fa-brands fa-github"></i></div>
+            <div class="icon"><i class="fa-brands fa-discord"></i></div>
+        </div>
+        <div class="content_footer">
+            copyright <i class=" fa fa-copyright"></i> @Piyushjain - All right reserved 2024
+        </div>
+    </footer>
+
+    <!-- scroll js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script>
+        const sr = ScrollReveal({
+            origin: "top",
+            distance: "80px",
+            duration: 2000,
+            reset: true,
+        });
+        sr.reveal(".type_text", { delay: 100 });
+        sr.reveal(".my_info", { delay: 200 });
+        sr.reveal(".buttons", { delay: 200 });
+        sr.reveal(".social_media", { delay: 200 });
+        sr.reveal(".big_image", { delay: 320 });
+
+        sr.reveal(".completed", { interval: 200 });
+
+        sr.reveal(".top-header", {});
+
+        const srleft = ScrollReveal({
+            origin: "left",
+            distance: "80px",
+            duration: 2000,
+            reset: true,
+        })
+        srleft.reveal(".personal", { delay: 100 });
+        srleft.reveal(".find_me", { delay: 100 });
+
+        const srRight = ScrollReveal({
+            origin: "right",
+            distance: "80px",
+            duration: 2000,
+            reset: true,
+        })
+        srRight.reveal(".skills", { delay: 100 });
+        srRight.reveal(".skill-box", { delay: 100 });
+        srRight.reveal(".user_details", { delay: 100 });
+
+
+
+    </script>
+</body>
+
+</html>
