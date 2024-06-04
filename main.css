@@ -196,6 +196,9 @@ body {
 
 
 .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     animation: imgFloat 4s ease-in-out infinite;
 }
